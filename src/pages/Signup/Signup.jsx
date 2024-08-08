@@ -15,7 +15,7 @@ const SignUp = () => {
 		e.preventDefault();
 		try {
 			const response = await axios.post(
-				'http://localhost:5500/api/users/register',
+				'https://evangadi-backend-4rwh.onrender.com/users/register',
 				{
 					email,
 					firstname,

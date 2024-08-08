@@ -12,7 +12,7 @@ const AskQuestion = () => {
 		try {
 			const token = localStorage.getItem("authToken");
 			const response = await axios.post(
-				"http://localhost:5500/api/questions/questions",
+				"https://evangadi-backend-4rwh.onrender.com/questions/questions",
 				{
 					title,
 					description,

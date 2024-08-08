@@ -14,7 +14,7 @@ const Home = () => {
 		const fetchQuestions = async () => {
 			try {
 				const response = await axios.get(
-					"http://localhost:5500/api/questions/questions"
+					"https://evangadi-backend-4rwh.onrender.com/questions/questions"
 				);
 				setQuestions(response.data.questions);
 

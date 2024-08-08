@@ -16,12 +16,12 @@ const AnswerAndQuestionDetail = () => {
 		const fetchQuestionAndAnswers = async () => {
 			try {
 				const questionResponse = await axios.get(
-					`http://localhost:5500/api/questions/questions/${id}`
+					`https://evangadi-backend-4rwh.onrender.com/questions/questions/${id}`
 				);
 				setQuestion(questionResponse.data.question);
 
 				const answersResponse = await axios.get(
-					`http://localhost:5500/api/answers/questions/${id}/answers`
+					`https://evangadi-backend-4rwh.onrender.com/answers/questions/${id}/answers`
 				);
 				setAnswers(answersResponse.data.answers);
 			} catch (error) {
@@ -41,7 +41,7 @@ const AnswerAndQuestionDetail = () => {
 		}
 		try {
 			const response = await axios.post(
-				`http://localhost:5500/api/answers/questions/${id}/answers`,
+				`https://evangadi-backend-4rwh.onrender.com/answers/questions/${id}/answers`,
 				{ answer: newAnswer },
 				{
 					headers: {
@@ -63,7 +63,7 @@ const AnswerAndQuestionDetail = () => {
 			return;
 		}
 		try {
-			await axios.delete(`http://localhost:5500/api/answers/answers/${answerid}`, {
+			await axios.delete(`https://evangadi-backend-4rwh.onrender.com/answers/answers/${answerid}`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
